@@ -1,0 +1,287 @@
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #09203F 0%, #537895 90%);
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+#loading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+
+canvas:focus {
+    outline: none;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #FFF;
+    cursor: pointer;
+}
+
+#hud {
+    position: absolute;
+    top: -35px;
+    width: 70vW;
+}
+
+#hud aside {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: -14px;
+    font-size: x-small;
+    color: white;
+}
+
+#hud aside>a {
+    text-decoration: none;
+    color: white;
+}
+
+#dateValue {
+    display: none;
+}
+
+/*
+* NAV NAV NAV
+*/
+
+.btnContainer {
+    width: 64px;
+    height: 100px;
+    flex: 0 0 23%;
+    margin: 2.5px;
+    position: relative;
+}
+
+.navLabel {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    color: white;
+    pointer-events: none;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: auto;
+    align-content: start;
+    bottom: 0;
+}
+
+#mobileWarning {
+    display: none;
+    position: absolute;
+    text-align: center;
+    font-size: x-small;
+    color: white;
+    width: 100%;
+    top: -26px;
+}
+
+#infoClick {
+    position: absolute;
+    text-align: center;
+    font-size: small;
+    border-radius: 10px;
+    padding: 2px;
+    width: 100%;
+    top: -38px;
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: white;
+}
+
+.navBtn {
+    background-image: url("../img/spritesheet.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    transition: 0.25s transform;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.navBtn:focus {
+    outline: none;
+}
+
+
+.navBtn:hover {
+    transition: 0.25s transform;
+    cursor: pointer;
+}
+
+.-event:hover {
+    width: 64px;
+    height: 64px;
+    background-position: -1px -1px;
+}
+
+.-event {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-position: -131px -1px;
+}
+
+#getInTouchLN {
+    position: absolute;
+    background-image: url(../img/linkedin.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 32px;
+    top: 32px;
+    left: -32px;
+}
+
+#getInTouchTW {
+    position: absolute;
+    background-image: url(../img/twitter.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 32px;
+    height: 32px;
+    top: 32px;
+    left: 32px;
+}
+
+.-globe {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-position: -1px -1px;
+}
+
+.-play-button {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-position: -133px -1px;
+}
+
+/*
+.-play-button:hover {
+    background-position: -67px -1px;
+}
+*/
+
+.-play-button-clicked {
+    background-position: -67px -1px;
+}
+
+.-world {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-position: -199px -1px;
+}
+
+@media screen and (orientation:portrait) {
+    #infoClick {
+        top: -63vh;
+    }
+}
+
+
+@media screen and (orientation:landscape) {
+    nav {
+        height: 50px;
+    }
+
+    #infoClick {
+        top: -63vh;
+    }
+
+    .-world,
+    .-globe,
+    .-play-button,
+    .-play-button-clicked {
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+    }
+
+    .-globe {
+        background-position: 0 -1px;
+    }
+
+    .-world {
+        background-position: -96px -1px;
+    }
+
+    .-play-button {
+        background-position: -65px -1px;
+    }
+
+    .-play-button-clicked {
+        background-position: -32px -1px;
+    }
+
+    .navLabel {
+        bottom: 48px;
+    }
+
+    #getInTouchLN,
+    #getInTouchTW {
+        top: 7px;
+        background-size: 66%;
+    }
+}
