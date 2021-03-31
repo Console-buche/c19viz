@@ -34,9 +34,3 @@ MIT et tout et tout. Servez-vous :-)
 ## Contact
 
 Sébastien Dubourg (Console_buche) - [@console_buche](https://twitter.com/console_buche)
-
-<!-- Inspi -->
-
-## Inspi
-
-- [Frontend Mentor](https://www.frontendmentor.io/challenges/)
