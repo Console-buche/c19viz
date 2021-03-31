@@ -4,7 +4,7 @@
 
 
   <p align="center">
-  Un projet webgl monté lors de la mise à dispo des données France en open data du covid 19, premier confinement. ça fait froid dans l'dos. 
+  Un projet webgl monté lors de la mise à dispo des données France en open data du covid 19, premier confinement. De quoi occuper les nuits de confinement... Et ça fait froid dans l'dos. 
   Côté tech : pas de framework, vanilla js & three.js 
   
    → La démo, c'est <a href="http://myotherspot.fr/c19viz/" target="_blank">par ici</a>
