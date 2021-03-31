@@ -7,14 +7,13 @@
   Un projet webgl monté lors de la mise à dispo des données France en open data du covid 19, premier confinement. ça fait froid dans l'dos. 
   Côté tech : pas de framework, vanilla js & three.js 
   
-  C'est <a href="http://myotherspot.fr/c19viz/" target="_blank">par ici</a>
-
+   → La démo, c'est <a href="http://myotherspot.fr/c19viz/" target="_blank">par ici</a>
+<p style="text-align:center">
   <img src="https://github.com/Console-buche/c19viz/blob/main/c19viz-demo.gif?raw=true" alt="Le gif de la viz" />
 </p>
 
   </p>
 
-</p>
 
 
 ## A propos
