@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164685937-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164685937-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta property="og:title" content="Covid-19 DataViz experiment" />
+    <meta property="og:description" content="3D viz of confirmed Covid 19 cases and deaths throughout the world>" />
+    <meta property="og:image" content="//myotherspot.fr/c19viz/img/thumbnail.jpg" />
+    <meta property='og:url' content="//www.myotherspot.fr/c19viz/index.html" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, WebGL, ThreeJS, Opendata">
+    <meta name="author" content="Sebastien Dubourg">
+
+    <title>Covis 19 - Dataviz experiment</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+
+<body>
+    <div id="loading">Your data is loading...</div>
+    <div class="screenContainer">
+        <div class="screenItem">
+            <div class="screenTag">Country</div>
+            <div class="screenData" id="sd_zone">...</div>
+        </div>
+        <div class="screenItem">
+            <div class="screenTag">Date</div>
+            <div class="screenData" id="sd_date">...</div>
+        </div>
+        <div class="screenItem">
+            <div class="screenTag">Confirmed Covid-19</div>
+            <div class="screenData" id="sd_confirmed">...</div>
+        </div>
+        <div class="screenItem">
+            <div class="screenTag">Deceased</div>
+            <div class="screenData" id="sd_deaths">...</div>
+        </div>
+    </div>
+    </div>
+    <nav>
+        <div class="btnContainer">
+            <div id="getInTouchLN" class="navBtn"></div>
+            <div id="getInTouchTW" class="navBtn"></div>
+            <label class="navLabel">Get in touch ?</label>
+        </div>
+        <div class="btnContainer">
+            <div data-projection="spherical" id="projectSpherical" value="Projection globe"
+                class="navBtn -globe projectionMode"></div>
+            <label class="navLabel">View</label>
+        </div>
+        <div class="btnContainer">
+            <div data-projection="flat" id="projectFlat" value="Projection planisphere"
+                class="navBtn -world projectionMode"></div>
+            <label class="navLabel">View</label>
+        </div>
+        <div class="btnContainer">
+            <div id="modeAuto" value="Lecture automatique" class="navBtn -play-button"></div>
+            <label class="navLabel">Auto play</label>
+        </div>
+        <div id="hud">
+            <div id="infoClick">Click "Auto play" for looping animation or select a date on the horizontal bar to get
+                worldwide stats on a given day. Mouse over / touch a country to update the stats bar. </div>
+            <div id="mobileWarning">Info : DataViz best viewed on desktop. Use of mouse recommended.</div>
+            <aside>Data source : <a target="_blank"
+                    href="https://public.opendatasoft.com/explore/dataset/covid-19-pandemic-worldwide-data/">Opendatasoft</a>
+            </aside>
+            <input type="range" min="1" max="100" value="0" class="slider" id="dateRate">
+            <p id="dateValue"></p>
+        </div>
+    </nav>
+
+    <canvas id="screenCanvas" height="256" width="512"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script src="./js/Tween.js"></script>
+
+</body>
+
+</html>
