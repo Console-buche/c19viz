@@ -9,7 +9,7 @@
   
   C'est <a href="http://myotherspot.fr/c19viz/" target="_blank">par ici</a>
 
-  <img src="https://github.com/Console-buche/pomodoro/blob/main/demo--pomodoro.gif?raw=true" alt="Le gif du pomodoro" />
+  <img src="https://github.com/Console-buche/c19viz/blob/main/c19viz-demo.gif?raw=true" alt="Le gif de la viz" />
 </p>
 
   </p>
